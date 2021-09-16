@@ -1,0 +1,5 @@
+import './app/init'
+import './auth/init'
+import './register/init'
+import './songlist/init'
+import './profile/init'
