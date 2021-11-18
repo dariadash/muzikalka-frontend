@@ -12,7 +12,6 @@ export const Tracker = () => {
             const currentSeconds = Math.floor(Player.currentTime)
             setCurrentTime(currentSeconds)
             setTotalTime(Player.duration)
-            // костыль,ну а чо делать
             if (Player.duration - 1 < Player.currentTime) {
                 nextTrack()
             }
