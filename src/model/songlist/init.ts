@@ -35,7 +35,7 @@ $songs
     .on(getSongsFx.doneData, (_,{data}) => data )
     .on(trackFavoriteFx, (songs,songId) => {
         const songItem = songs.findIndex((song) => song.id === songId)
-        songs[songItem].user_id = 1488
+        songs[songItem].user_id = 123
         return [...songs]
     })
     .on(trackUnfavoriteFx, (songs,songId) => {
@@ -83,7 +83,6 @@ $currentSongId
             return songId + 1
         }
     })
-    // НЕ ПАШЕТ СУКА
     .on(playSameTrack, (curSongId, songId) => {
         if (curSongId === songId) {
             if (Player.ended) {
@@ -154,17 +153,17 @@ stopPlaying.watch(() => {
 })
 
 nextTrackGuarded.watch(() => {
-    console.log('шайтан')
+    console.log('следующий трек')
 })
 
 playSameTrack.watch(()=>{
     Player.play()
-     console.log('сейм трек ')
+     console.log('сейм трек')
  })
 
 playNewTrack.watch((st)=>{
     Player.play()
-    console.log('новый трек ')
+    console.log('новый трек')
     console.log(st)
 })
 
